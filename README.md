@@ -4,6 +4,12 @@ koding
 A project to simulate the koding terminal.
 
 
+koding
+======
+
+A project to simulate the koding terminal.
+
+
 #网页版Terminal（WebShell）详解
 -------------------------------------------
 ##技术背景
@@ -21,13 +27,19 @@ A project to simulate the koding terminal.
 
 1. 对运维人员的身份认证
 2. 对运维操作的访问控制和审计等
+
+
 ##实现原理
 提示文本渲染到面板中，然后当用户输入命令时，发送ajax请求到服务端，服务端解析命令文本，并且用相应的工具类来与Linux服务器打交道，把处理结果封装在一个json对象返回到客户端，客户端将结果渲染到面板中。
+
+
 ##开源软件
 1. [GateOne](https://github.com/liftoff/GateOne/) 使用10443端口，使用Python，JavaScript，CSS等开发。
 2. [ShellInABox](https://code.google.com/p/shellinabox/) 使用4200端口。
 3. [WSSH](https://github.com/aluzzardi/wssh/) 使用5000端口，使用Python，JavaScript，CSS开发。
 4. [Web-Shell](http://code.google.com/p/web-shell/) 针对iPhone的WebShell。
+
+
 ##安全性分析
 1. 通信数据难于过滤。
 2. 可以通过上传文件，包括“图片”（仅仅是后缀名为图片类型），压缩文件，数据库文件（可以通过select语句生成WebShell，从而提权）。
